@@ -30,6 +30,18 @@ public class MobRegister {
                             .sized(1.5f, 1.0f)
                             .build(new ResourceLocation(MythicalFoes.MODID, "conjured_hound").toString()));
 
+    public static final RegistryObject<EntityType<MolynianKnightEntity>> MOLYNIAN_KNIGHT =
+            ENTITY_TYPES.register("molynian_knight",
+                    () -> EntityType.Builder.of(MolynianKnightEntity::new, MobCategory.MONSTER)
+                            .sized(1.1f, 2.7f)
+                            .build(new ResourceLocation(MythicalFoes.MODID, "molynian_knight").toString()));
+
+    public static final RegistryObject<EntityType<MolynianVanguardEntity>> MOLYNIAN_VANGUARD =
+            ENTITY_TYPES.register("molynian_vanguard",
+                    () -> EntityType.Builder.of(MolynianVanguardEntity::new, MobCategory.MONSTER)
+                            .sized(1.2f, 2.7f)
+                            .build(new ResourceLocation(MythicalFoes.MODID, "molynian_vanguard").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

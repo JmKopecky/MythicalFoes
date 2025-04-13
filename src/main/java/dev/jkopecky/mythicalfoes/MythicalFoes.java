@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import dev.jkopecky.mythicalfoes.mobs.MobRegister;
 import dev.jkopecky.mythicalfoes.mobs.mobrenderers.ConjuredHoundRenderer;
 import dev.jkopecky.mythicalfoes.mobs.mobrenderers.ConjuredKnightRenderer;
+import dev.jkopecky.mythicalfoes.mobs.mobrenderers.MolynianKnightRenderer;
+import dev.jkopecky.mythicalfoes.mobs.mobrenderers.MolynianVanguardRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
@@ -92,6 +94,8 @@ public class MythicalFoes
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             EntityRenderers.register(MobRegister.CONJURED_KNIGHT.get(), ConjuredKnightRenderer::new);
             EntityRenderers.register(MobRegister.CONJURED_HOUND.get(), ConjuredHoundRenderer::new);
+            EntityRenderers.register(MobRegister.MOLYNIAN_KNIGHT.get(), MolynianKnightRenderer::new);
+            EntityRenderers.register(MobRegister.MOLYNIAN_VANGUARD.get(), MolynianVanguardRenderer::new);
         }
     }
 }
